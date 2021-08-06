@@ -3,8 +3,16 @@
 const btn = document.getElementById("trigBtn");
 let status = true;
 
-/*********** Business-Logic | Toggle ************/
+/*********** Event-Listener ************/
 
+btn.addEventListener("click", actOnBtnEvent);
+
+function actOnBtnEvent()
+{
+    toggleStatus();
+}
+
+/*********** Business-Logic | Toggle ************/
 // Modul: Toggle status
 function toggleStatus()
 {
@@ -12,6 +20,9 @@ function toggleStatus()
     updateView();
 }
 
+
+/*********** Änderung in View-Schicht ************/
+// Modul: Umschaltung der View-Schicht
 function updateView()
 {
     if (!status) 
@@ -25,8 +36,6 @@ function updateView()
         switchBtnTxt("night");
     }
 }
-
-/*********** Änderung in View-Schicht ************/
 
 // Modul: Umschaltung der Klassennamen | Test:
 //switchClassName("night");
