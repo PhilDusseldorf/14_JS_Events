@@ -1,6 +1,30 @@
 
 /********  Variablen **********/
 const btn = document.getElementById("trigBtn");
+let status = true;
+
+/*********** Business-Logic | Toggle ************/
+
+// Modul: Toggle status
+function toggleStatus()
+{
+    status = !status;
+    updateView();
+}
+
+function updateView()
+{
+    if (!status) 
+    {
+        switchClassName("night");
+        switchBtnTxt("day");
+    } 
+    else 
+    {
+        switchClassName("day");
+        switchBtnTxt("night");
+    }
+}
 
 /*********** Änderung in View-Schicht ************/
 
