@@ -4,9 +4,11 @@ const btn = document.getElementById("trigBtn");
 let status = true;
 
 /*********** Event-Listener ************/
+// Webseite geladen
+window.addEventListener("load", toggleStatus);
 
+// Klick auf Button
 btn.addEventListener("click", actOnBtnEvent);
-
 function actOnBtnEvent()
 {
     toggleStatus();
